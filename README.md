@@ -1,2 +1,15 @@
-# Fine_Grained_Clf_Textual_Cues
-Based on the WACV 2020 paper - Fine Grained Classification and Retrieval by Combining Visual and Locally Pooled Textual Features
+# Fine-grained classification with textual cues
+
+## Install
+
+Create Conda environment
+
+    $ conda env create -f environment.yml
+
+Activate the environment
+
+    $ conda activate finegrain
+
+Train from scratch
+
+python3 train.py 
