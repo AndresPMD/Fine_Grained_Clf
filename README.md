@@ -8,7 +8,7 @@ Create Conda environment
 
 Activate the environment
 
-    $ conda activate finegrain
+    $ conda activate finegrained
 
 Train from scratch
 
