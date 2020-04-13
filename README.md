@@ -1,5 +1,7 @@
 # Fine-grained classification with textual cues
 
+Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
+
 ## Install
 
 Create Conda environment
