@@ -33,3 +33,14 @@ To extract the PHOCs, the following to repos can be used:
  https://github.com/lluisgomez/single-shot-str (Tensorflow)
  
 Finally, the Fisher Vector out of the obtained PHOCs are used during training/inference time.
+
+The Fisher Vector implementation was take from:
+https://gist.github.com/danoneata/9927923
+
+In the folder 'preproc' there is a script which does the following:
+1) Create a PHOC dictionary.
+2) Perform Scaling, Normalization, PCA of the PHOC dictionary.
+3) Train a GMM based on the PHOC data (Takes aprox. 6000 seconds)
+4) Given a PHOC result path with .txt files as PHOC predictions, reads each file and constructs the Fisher Vector to be used to train the model.
+
+phocs_to_FV.py
