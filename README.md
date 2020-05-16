@@ -2,9 +2,9 @@
 
 Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
 
-!![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
+![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
 
-!![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
+![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
 
 ## Install
 
