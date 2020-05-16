@@ -2,6 +2,10 @@
 
 Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
 
+![alt text](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
+
+![alt text](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
+
 ## Install
 
 Create Conda environment
@@ -18,7 +22,7 @@ python3 train.py
 
 (Please refer to the code to decide the args to train the model)
 
-## Datasets:
+## Datasets
 
 Con-Text dataset can be downloaded from:
 https://staff.fnwi.uva.nl/s.karaoglu/datasetWeb/Dataset.html
@@ -51,3 +55,7 @@ Finally, run:
     $ python2 phocs_to_FV.py
     
 I can provide the Textual Features for the Bottles and Context dataset used in the paper, but if you want to train/test the model with another dataset you will have to generate the Textual features.
+
+
+## Results
+![alt text](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/Results.png)
