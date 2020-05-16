@@ -2,9 +2,9 @@
 
 Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
 
-![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
+(https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
 
-![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
+(https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
 
 ## Install
 
@@ -57,5 +57,5 @@ Finally, run:
 I can provide the Textual Features for the Bottles and Context dataset used in the paper, but if you want to train/test the model with another dataset you will have to generate the Textual features.
 
 
-## Results
-![Image description](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/Results.png)
+## Classification Results
+!(https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/Results.png)
