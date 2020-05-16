@@ -125,38 +125,6 @@ def text_cleaner (dirty_text):
     clean_text = ''.join(c for c in dirty_text if c not in '(){}<>;:!@#$%^&*_-=+-*/[]\' \"?>.<,')
     return clean_text
 
-def load_phoc_features(result_path, max_phocs):
-    '''
-    Reads the PHOC results and returns a tensor
-    :param result_path, max_phocs
-    :return: numpy array
-    '''
-    text_file = result_path
-    phoc_full_string = ''
-    max_phocs = max_phocs
-    phoc_matrix = np.zeros((max_phocs, 604))
-    with open(text_file) as f:
-        phoc_list = list()
-        for line in f:
-            if (line[0]) == '[':
-                phoc_full_string = ''
-            if (line[-2]) == ']':  # or [-2] because of \n - > Means last line
-                phoc_string = line.replace("\n", "").replace("[", "").replace("]", "")
-                phoc_full_string = phoc_full_string + phoc_string
-                # ORIGINAL CODE: phoc_vector = np.array(list(phoc_full_string))
-                phoc_vector = np.fromstring(phoc_full_string, dtype=float, count=-1, sep=' ')
-
-                # print("NAIVE EMB SIZE IS: ", np.shape(phoc_vector))
-                phoc_list.append(phoc_vector)
-                continue
-
-            phoc_string = line.replace("\n", "").replace("[", "").replace("]", "")
-            phoc_full_string = phoc_full_string + phoc_string
-
-    for i in range (len(phoc_list)):
-        phoc_matrix[i][:] = phoc_list[i]
-    return phoc_matrix
-
 
 def fisher_vector(xx, gmm):
     """Computes the Fisher vector on a set of descriptors.
