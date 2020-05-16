@@ -2,9 +2,9 @@
 
 Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
 
-(https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
+![alt text](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample1.png)
 
-(https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
+![alt text](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/sample2.png)
 
 ## Install
 
@@ -58,4 +58,4 @@ I can provide the Textual Features for the Bottles and Context dataset used in t
 
 
 ## Classification Results
-!(https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/Results.png)
+![alt text](https://github.com/DreadPiratePsyopus/Fine_Grained_Clf/tree/master/project_images/Results.png)
