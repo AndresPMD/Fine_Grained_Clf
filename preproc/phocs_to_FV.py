@@ -298,7 +298,7 @@ for file in tqdm(files):
     scaler_phoc = scaler.transform(phoc_normalized)
     phoc_PCA = pca.transform(scaler_phoc)
     
-    phoc_FV = fisher_vector(norm_phoc_list, gmm)
+    phoc_FV = fisher_vector(phoc_PCA, gmm)
     phoc_FV = preprocessing.normalize(phoc_FV.reshape(1,-1), norm ='l2')
     
     phoc_FV = phoc_FV.tolist()
