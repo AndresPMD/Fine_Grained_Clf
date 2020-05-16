@@ -1,11 +1,13 @@
 # Fine-grained classification with textual cues
 
-Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
+Implementation based in our paper: "Fine-grained Image Classification and Retrieval by Combining Visual and Locally Pooled Textual Features"
 
-![alt text](project_images/sample1.png?raw=true "Model")
+https://arxiv.org/pdf/2001.04732.pdf
 
 <a href="url"><img src="project_images/sample2.png" align="center" height="550" width="500" ></a>
 <p></p>
+
+![alt text](project_images/sample1.png?raw=true "Model")
 
 
 
