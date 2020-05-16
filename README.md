@@ -4,7 +4,10 @@ Implementation based in our paper: https://arxiv.org/pdf/2001.04732.pdf
 
 ![alt text](project_images/sample1.png?raw=true "Model")
 
-<a href="url"><img src="project_images/sample2.png" align="left" height="400" width="300" ></a>
+<a href="url"><img src="project_images/sample2.png" align="left" height="500" width="400" ></a>
+
+
+
 
 ## Install
 
