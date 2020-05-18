@@ -125,7 +125,6 @@ def text_cleaner (dirty_text):
     clean_text = ''.join(c for c in dirty_text if c not in '(){}<>;:!@#$%^&*_-=+-*/[]\' \"?>.<,')
     return clean_text
 
-
 def fisher_vector(xx, gmm):
     """Computes the Fisher vector on a set of descriptors.
     Parameters
@@ -168,42 +167,6 @@ def fisher_vector(xx, gmm):
     # Merge derivatives into a vector.
     #return np.hstack((d_pi, d_mu.flatten(), d_sigma.flatten()))
     return np.hstack((d_mu.flatten(), d_sigma.flatten()))
-
-def load_phoc_features(result_path, max_phocs):
-    '''
-    Reads the PHOC txt results and returns a tensor
-    :param result_path, max_phocs
-    :return: numpy array
-    '''
-    text_file = result_path
-    phoc_full_string = ''
-    max_phocs = max_phocs
-    
-    with open(text_file) as f:
-        phoc_list = list()
-        for line in f:
-            if (line[0]) == '[':
-                phoc_full_string = ''
-            if (line[-2]) == ']':  # or [-2] because of \n - > Means last line
-                phoc_string = line.replace("\n", "").replace("[", "").replace("]", "")
-                phoc_full_string = phoc_full_string + phoc_string
-                # ORIGINAL CODE: phoc_vector = np.array(list(phoc_full_string))
-                phoc_vector = np.fromstring(phoc_full_string, dtype=float, count=-1, sep=' ')
-
-                # print("NAIVE EMB SIZE IS: ", np.shape(phoc_vector))
-                phoc_list.append(phoc_vector)
-                continue
-
-            phoc_string = line.replace("\n", "").replace("[", "").replace("]", "")
-            phoc_full_string = phoc_full_string + phoc_string
-    
-    if len(phoc_list) > max_phocs:
-        phoc_matrix = np.zeros((max_phocs, 604))
-    else:
-        phoc_matrix = np.zeros((len(phoc_list), 604))
-    for i in range (np.shape(phoc_matrix)[0]):
-        phoc_matrix[i][:] = phoc_list[i]
-    return phoc_matrix
 
 
 ## Load Jaderberg 90K dictionary
@@ -248,17 +211,20 @@ print('Total time (s): ', finish  - start)
 
 ## OBTAIN FISHER VECTORS FROM PHOCS
 
-fishers_path = './Context/fisher_vectors/'
+fishers_path = './Fisher_vectors/'
 if not os.path.exists(fishers_path):
     os.mkdir(fishers_path)
-phocs_path = './Context/yolo_phoc_results_txt/'
+
+phocs_path = '/SSD/pytorch-yolo2-master/results/SVT/'
 files = os.listdir(phocs_path)
 
-     
+
 for file in tqdm(files):
-    # Read PHOCs from text files:
-    phocs = load_phoc_features(phocs_path+file, max_phocs=30)
-    
+    # Read PHOCs from json file:
+    with open(phocs_path + file)as fp:
+        phocs = json.load(fp)
+    phocs = np.resize(phocs, (np.shape(phocs)[0], 604))
+
     if np.shape(phocs)[0] == 0:
         phocs = np.zeros([1,604])
     
