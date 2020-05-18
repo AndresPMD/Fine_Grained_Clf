@@ -196,11 +196,10 @@ pca_data = pca.transform(data)
 print(np.shape(pca_data))
 print('PCA Complete!')
 
-## TRAIN GMM model.... Takes time (aprox 2 hours)
+## TRAIN GMM model
 start = time.time()
 # Original on Raw PHOCs with PCA
-gmm = GMM(n_components = 64, covariance_type = 'full')
-# check what to fit in GMM
+gmm = GMM(n_components = 64, covariance_type = 'diag')
 print(np.shape(pca_data))
 gmm.fit(pca_data)
 
