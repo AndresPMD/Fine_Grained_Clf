@@ -64,3 +64,21 @@ Precomputed textual features for the Bottles and Context dataset used in the pap
 
 ## Classification Results
 ![alt text](project_images/Results.png?raw=true "Results")
+
+
+
+## Reference
+
+If you found this code useful, please cite the following paper:
+
+@article{mafla2020fine,
+  title={Fine-grained Image Classification and Retrieval by Combining Visual and Locally Pooled Textual Features},
+  author={Mafla, Andres and Dey, Sounak and Biten, Ali Furkan and Gomez, Lluis and Karatzas, Dimosthenis},
+  journal={arXiv preprint arXiv:2001.04732},
+  year={2020}
+}
+
+
+## License
+
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
